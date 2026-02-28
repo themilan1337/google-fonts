@@ -1,0 +1,49 @@
+{
+    "name": "google-fonts",
+    "displayName": "Google Fonts",
+    "description": "Allows you to browse and insert Google Fonts <link> or @import !",
+    "version": "0.0.1",
+    "publisher": "themilan1337",
+    "repository": "https://github.com/themilan1337/google-fonts",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "google-fonts.insertLink",
+                "title": "Google Fonts: Insert <link>"
+            },
+            {
+                "command": "google-fonts.insertImport",
+                "title": "Google Fonts: Insert CSS @import"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^18.11.18",
+        "@types/node-fetch": "^2.6.2",
+        "@types/vscode": "^1.75.0",
+        "@vscode/test-electron": "^2.3.0",
+        "glob": "^13.0.6",
+        "globular": "^0.2.1",
+        "mocha": "^11.7.5",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.9"
+    }
+}
